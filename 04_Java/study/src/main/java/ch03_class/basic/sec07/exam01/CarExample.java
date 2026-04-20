@@ -8,6 +8,15 @@ public class CarExample {
         System.out.println("------------------------");
         System.out.println("model : "+myCar.model);
         System.out.println("color : "+myCar.color);
-        System.out.println("maxspeed : "+myCar.maxspeed);
+        System.out.println("max speed : "+myCar.maxspeed);
+
+        System.out.println("--------------------");
+        Car car3 = new Car("롤스로이스",320);
+
+        Car car4 = new Car("벤츠",300,"블랙");
+        System.out.println("model : "+car4.model);
+        System.out.println("color : "+car4.color);
+        System.out.println("max speed : "+car3.maxspeed);
+
     }
 }
