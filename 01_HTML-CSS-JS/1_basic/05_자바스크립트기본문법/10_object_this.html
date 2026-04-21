@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let person = {
+        name: '유인성',
+        eat: function (food) {
+          alert(this.name + '이' + food + '을/를 먹습니다.');
+          /* this.name 이란 person.name과 동일한 의미 
+          사용하는 이유는 person 즉 객채가  여러개일때  혼선을 방지하기 위함*/
+        },
+      };
+
+      person.eat('밥');
+    </script>
+  </head>
+  <body></body>
+</html>

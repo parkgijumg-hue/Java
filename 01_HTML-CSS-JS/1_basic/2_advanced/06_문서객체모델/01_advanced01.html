@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let name = document.getElementById('name');
+
+        let btn = document.getElementById('btn');
+        btn.onclick = function () {
+          console.log(name.value);
+        };
+        //name -> 객체 외부 변수 호출함
+        // 같은 객체(중괄호) 내부의 다른 속성을 호출하고  싶은  경우
+        //현재 객체를 뜻하는 this 사용해야함
+      };
+    </script>
+  </head>
+  <body>
+    <form>
+      <label for="name">이름:</label>
+      <input type="text" id="name" name="name" size="30" />
+      <input type="button" id="btn" value="전송" />
+    </form>
+  </body>
+</html>

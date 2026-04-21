@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let date = new Date();
+      let month = date.getMonth() + 1;
+
+      if (3 < month && month <= 6) {
+        alert('spring');
+      } else if (6 < month && month <= 9) {
+        alert('summer');
+      } else if (9 < month && month <= 12) {
+        alert('fall');
+      } else {
+        alert('winter');
+      }
+
+      // == :같다
+      // =: 대입연산자
+      // ||(or): 조건식이 하나라도 참이면 수행
+      // &&(and)  : 조건식 모두 참이여야 수행
+    </script>
+  </head>
+
+  <body></body>
+</html>

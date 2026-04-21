@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let check = document.getElementsByName('food');
+        let btn = document.getElementById('btn');
+
+        btn.onclick = function () {
+          let select = [];
+          for (let i = 0; i < check.length; i++) {
+            if (check[i].checked) {
+              select.push(check[i].value);
+            }
+          }
+          console.log(select);
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <div>
+      좋아하는 음식은?
+      <label><input type="checkbox" name="food" value="라면" /> 라면</label>
+      <label><input type="checkbox" name="food" value="만두" /> 만두</label>
+      <label><input type="checkbox" name="food" value="불고기" /> 불고기</label>
+      <input id="btn" type="button" value="전송" />
+    </div>
+  </body>
+</html>
