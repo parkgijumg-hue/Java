@@ -1,0 +1,12 @@
+package main.java.ch06_nested_and_anonymous.basic.sec07.exam02;
+
+public class HomeExample {
+    public static void main(String[] args) {
+        // Home 객체 생성
+        Home home = new Home();
+
+        // 익명 구현 객체가 대입된 필드 사용
+        home.run();
+
+    }
+}

@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# IntelliJ IDEA
+**/.idea/
+**/*.iml
+
+# Node
+**/node_modules/
+
+# Separate nested repo (and large deps) kept out of this repo
+03_VueJs/
