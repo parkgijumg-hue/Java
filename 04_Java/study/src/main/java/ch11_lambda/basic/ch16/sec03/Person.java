@@ -1,4 +1,4 @@
-package main.java.ch10_lambda.basic.ch16.sec03;
+package main.java.ch11_lambda.basic.ch16.sec03;
 
 public class Person {
 

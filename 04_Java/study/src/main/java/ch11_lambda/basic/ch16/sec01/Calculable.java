@@ -1,4 +1,4 @@
-package main.java.ch10_lambda.basic.ch16.sec01;
+package main.java.ch11_lambda.basic.ch16.sec01;
 
 // 함수형 인터페이스 선언
 // "추상 메서드가 딱 1개만 있는 인터페이스"라는 걸 보장해주는 어노테이션

@@ -1,4 +1,4 @@
-package main.java.ch10_lambda.basic;
+package main.java.ch11_lambda.basic;
 
 import java.util.List;
 import java.util.function.BinaryOperator;

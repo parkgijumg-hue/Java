@@ -1,4 +1,4 @@
-package main.java.ch10_lambda.basic.ch16.sec01;
+package main.java.ch11_lambda.basic.ch16.sec01;
 
 public class LambdaExample {
     public static void main(String[] args) {
