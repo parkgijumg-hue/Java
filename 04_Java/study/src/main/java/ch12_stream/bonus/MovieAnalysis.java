@@ -1,9 +1,6 @@
 package main.java.ch12_stream.bonus;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class MovieAnalysis {
@@ -59,11 +56,25 @@ public class MovieAnalysis {
         // 4. 각 장르별로 영화를 그룹화하고, 장르별 영화 수를 맵으로 반환하기
         // 결과 : {SF=3, 액션=2, 드라마=1, 로맨스=1, 뮤지컬=1}
         Map<String,Long> generes = movies.stream()
-                .collect(Collectors.groupingBy(Movie::getGenre,Collectors.counting()));
+                .collect(Collectors.groupingBy(Movie::getGenre,Collectors.counting()))
+                .entrySet().stream()
+                .sorted(Map.Entry.<String,Long>comparingByValue().reversed())
+                .collect(Collectors.toMap(Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (a, b) -> a,
+                        LinkedHashMap::new));
+
         System.out.println(generes);
 
         // 5. 평점이 8.5 이상인 영화들의 장르를 중복 없이 알파벳 순으로 정렬하여 반환하기
         // 결과 : [SF, 드라마, 액션]
-        
+        List<String> genres2 = movies.stream()
+                .filter(m->m.getRating()>=8.5)
+                .map(Movie::getGenre)
+                .distinct()
+                .sorted()
+                .toList();
+        System.out.println(genres2);
+
     }
 }
